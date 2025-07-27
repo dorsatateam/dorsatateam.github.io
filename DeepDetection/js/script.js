@@ -186,7 +186,10 @@ function loading(){
 }
 
 async function buktikan(){
-    setInterval(function() {
+    if(imgUrl == null){
+      
+    }
+    setTimeout(function() {
       loadin.classList.remove("loading-visible");
       popup.classList.add("popup-visible");
       console.log(error);
