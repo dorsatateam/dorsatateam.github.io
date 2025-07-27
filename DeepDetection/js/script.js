@@ -186,23 +186,28 @@ function loading(){
 }
 
 async function buktikan(){
-    try{
-      let imgUrl = await uploadImageToIMGBB(file);
-      let detectionResult;
-      setTimeout(async function(){
-        if(imgUrl != null){
-          detectionResult = await detectImage(imgUrl);
-          var result = (detectionResult > 50.0) ? "Deepfake" : "Asli";
-          let hasil = document.getElementById("tulisancek");
-          hasil.innerHTML = detectionResult + "% Deepfake" + "<br>Gambar kemungkinan " + result ;
-          loadin.classList.remove("loading-visible");
-        }
-      }, 1000)
-    } catch(error){
+    setInterval(function() {
       loadin.classList.remove("loading-visible");
       popup.classList.add("popup-visible");
       console.log(error);
-    }
+    }, 1000);
+    // try{
+    //   let imgUrl = await uploadImageToIMGBB(file);
+    //   let detectionResult;
+    //   setTimeout(async function(){
+    //     if(imgUrl != null){
+    //       detectionResult = await detectImage(imgUrl);
+    //       var result = (detectionResult > 50.0) ? "Deepfake" : "Asli";
+    //       let hasil = document.getElementById("tulisancek");
+    //       hasil.innerHTML = detectionResult + "% Deepfake" + "<br>Gambar kemungkinan " + result ;
+    //       loadin.classList.remove("loading-visible");
+    //     }
+    //   }, 1000)
+    // } catch(error){
+    //   loadin.classList.remove("loading-visible");
+    //   popup.classList.add("popup-visible");
+    //   console.log(error);
+    // }
     
 }
 //nutup popup
