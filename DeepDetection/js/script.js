@@ -186,7 +186,7 @@ function loading(){
 }
 
 async function buktikan(){
-    if(imgUrl != null){
+    if(file != null){
       loading();
       setTimeout(function() {
       loadin.classList.remove("loading-visible");
