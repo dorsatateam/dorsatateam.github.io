@@ -187,6 +187,7 @@ function loading(){
 
 async function buktikan(){
     if(imgUrl != null){
+      loading();
       setTimeout(function() {
       loadin.classList.remove("loading-visible");
       popup.classList.add("popup-visible");
