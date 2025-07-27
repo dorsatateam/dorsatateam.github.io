@@ -186,14 +186,14 @@ function loading(){
 }
 
 async function buktikan(){
-    if(imgUrl == null){
-      
-    }
-    setTimeout(function() {
+    if(imgUrl != null){
+      setTimeout(function() {
       loadin.classList.remove("loading-visible");
       popup.classList.add("popup-visible");
       console.log(error);
     }, 1000);
+    }
+    
     // try{
     //   let imgUrl = await uploadImageToIMGBB(file);
     //   let detectionResult;
